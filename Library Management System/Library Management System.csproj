@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\AuthorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AuthorControl.Designer.cs">
+      <DependentUpon>AuthorControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\BookControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\BookControl.Designer.cs">
       <DependentUpon>BookControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CategoryControl.Designer.cs">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\DashboardControl.cs">
       <SubType>UserControl</SubType>
@@ -74,8 +86,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AuthorControl.resx">
+      <DependentUpon>AuthorControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\BookControl.resx">
       <DependentUpon>BookControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CategoryControl.resx">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>

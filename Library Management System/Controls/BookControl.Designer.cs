@@ -29,34 +29,34 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtISBN = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTitle = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboAuthor = new System.Windows.Forms.ComboBox();
-            this.comboCategory = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPublisher = new System.Windows.Forms.MaskedTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtPublishYear = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtQty = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtShelf = new System.Windows.Forms.MaskedTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textDescription = new System.Windows.Forms.TextBox();
-            this.btnAddBook = new System.Windows.Forms.Button();
-            this.btnUpdateBook = new System.Windows.Forms.Button();
-            this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnClearBook = new System.Windows.Forms.Button();
-            this.dataGridBook = new System.Windows.Forms.DataGridView();
-            this.txtSearchBook = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
+            this.btnUpdateBook = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBookCategory = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBookAuthor = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnSearchBook = new System.Windows.Forms.Button();
+            this.dataGridBook = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtBookISBN = new System.Windows.Forms.TextBox();
+            this.txtBookTitle = new System.Windows.Forms.TextBox();
+            this.txtBookPublisher = new System.Windows.Forms.TextBox();
+            this.txtBookPublishYear = new System.Windows.Forms.TextBox();
+            this.txtBookQty = new System.Windows.Forms.TextBox();
+            this.txtBookShelf = new System.Windows.Forms.TextBox();
+            this.txtBookDescription = new System.Windows.Forms.TextBox();
+            this.txtSearchBook = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBook)).BeginInit();
@@ -64,318 +64,341 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtBookDescription);
+            this.panel1.Controls.Add(this.txtBookShelf);
+            this.panel1.Controls.Add(this.txtBookQty);
+            this.panel1.Controls.Add(this.txtBookPublishYear);
+            this.panel1.Controls.Add(this.txtBookPublisher);
+            this.panel1.Controls.Add(this.txtBookTitle);
+            this.panel1.Controls.Add(this.txtBookISBN);
             this.panel1.Controls.Add(this.btnClearBook);
             this.panel1.Controls.Add(this.btnDeleteBook);
             this.panel1.Controls.Add(this.btnUpdateBook);
             this.panel1.Controls.Add(this.btnAddBook);
-            this.panel1.Controls.Add(this.textDescription);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtShelf);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.txtQty);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.txtPublishYear);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtPublisher);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboCategory);
+            this.panel1.Controls.Add(this.comboBookCategory);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboAuthor);
+            this.panel1.Controls.Add(this.comboBookAuthor);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtTitle);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtISBN);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1271, 275);
+            this.panel1.Size = new System.Drawing.Size(953, 226);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnSearchBook);
-            this.panel2.Controls.Add(this.txtSearchBook);
-            this.panel2.Controls.Add(this.dataGridBook);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 277);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1271, 437);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ISBN:";
-            // 
-            // txtISBN
-            // 
-            this.txtISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtISBN.Location = new System.Drawing.Point(98, 74);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(235, 30);
-            this.txtISBN.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(304, 32);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "BOOK MANAGEMENT";
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.Location = new System.Drawing.Point(408, 74);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(446, 30);
-            this.txtTitle.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(347, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 25);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Title:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(895, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 25);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Author: ";
-            // 
-            // comboAuthor
-            // 
-            this.comboAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboAuthor.FormattingEnabled = true;
-            this.comboAuthor.Location = new System.Drawing.Point(982, 76);
-            this.comboAuthor.Name = "comboAuthor";
-            this.comboAuthor.Size = new System.Drawing.Size(267, 33);
-            this.comboAuthor.TabIndex = 9;
-            // 
-            // comboCategory
-            // 
-            this.comboCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Location = new System.Drawing.Point(117, 142);
-            this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(215, 33);
-            this.comboCategory.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 25);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Category:";
-            // 
-            // txtPublisher
-            // 
-            this.txtPublisher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPublisher.Location = new System.Drawing.Point(437, 145);
-            this.txtPublisher.Name = "txtPublisher";
-            this.txtPublisher.Size = new System.Drawing.Size(235, 30);
-            this.txtPublisher.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(338, 147);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 25);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Publisher: ";
-            // 
-            // txtPublishYear
-            // 
-            this.txtPublishYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPublishYear.Location = new System.Drawing.Point(837, 147);
-            this.txtPublishYear.Name = "txtPublishYear";
-            this.txtPublishYear.Size = new System.Drawing.Size(151, 30);
-            this.txtPublishYear.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(698, 149);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 25);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Publish Year: ";
-            // 
-            // txtQty
-            // 
-            this.txtQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQty.Location = new System.Drawing.Point(1117, 150);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(132, 30);
-            this.txtQty.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1013, 152);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 25);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Quantity:";
-            // 
-            // txtShelf
-            // 
-            this.txtShelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShelf.Location = new System.Drawing.Point(117, 211);
-            this.txtShelf.Name = "txtShelf";
-            this.txtShelf.Size = new System.Drawing.Size(215, 30);
-            this.txtShelf.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 214);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 25);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Shelf: ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(338, 214);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(115, 25);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Description:";
-            // 
-            // textDescription
-            // 
-            this.textDescription.Location = new System.Drawing.Point(459, 211);
-            this.textDescription.Multiline = true;
-            this.textDescription.Name = "textDescription";
-            this.textDescription.Size = new System.Drawing.Size(213, 60);
-            this.textDescription.TabIndex = 21;
-            // 
-            // btnAddBook
-            // 
-            this.btnAddBook.BackColor = System.Drawing.Color.BurlyWood;
-            this.btnAddBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddBook.Location = new System.Drawing.Point(689, 235);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(129, 36);
-            this.btnAddBook.TabIndex = 22;
-            this.btnAddBook.Text = "Add";
-            this.btnAddBook.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdateBook
-            // 
-            this.btnUpdateBook.BackColor = System.Drawing.Color.BurlyWood;
-            this.btnUpdateBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUpdateBook.Location = new System.Drawing.Point(841, 235);
-            this.btnUpdateBook.Name = "btnUpdateBook";
-            this.btnUpdateBook.Size = new System.Drawing.Size(135, 36);
-            this.btnUpdateBook.TabIndex = 23;
-            this.btnUpdateBook.Text = "Update";
-            this.btnUpdateBook.UseVisualStyleBackColor = false;
-            // 
-            // btnDeleteBook
-            // 
-            this.btnDeleteBook.BackColor = System.Drawing.Color.IndianRed;
-            this.btnDeleteBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeleteBook.Location = new System.Drawing.Point(999, 235);
-            this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(117, 36);
-            this.btnDeleteBook.TabIndex = 24;
-            this.btnDeleteBook.Text = "Delete";
-            this.btnDeleteBook.UseVisualStyleBackColor = false;
-            this.btnDeleteBook.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnClearBook
             // 
             this.btnClearBook.BackColor = System.Drawing.Color.BurlyWood;
             this.btnClearBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClearBook.Location = new System.Drawing.Point(1139, 235);
+            this.btnClearBook.Location = new System.Drawing.Point(854, 191);
+            this.btnClearBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClearBook.Name = "btnClearBook";
-            this.btnClearBook.Size = new System.Drawing.Size(110, 36);
+            this.btnClearBook.Size = new System.Drawing.Size(82, 29);
             this.btnClearBook.TabIndex = 25;
             this.btnClearBook.Text = "Clear";
             this.btnClearBook.UseVisualStyleBackColor = false;
             // 
-            // dataGridBook
+            // btnDeleteBook
             // 
-            this.dataGridBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridBook.Location = new System.Drawing.Point(3, 57);
-            this.dataGridBook.Name = "dataGridBook";
-            this.dataGridBook.RowHeadersWidth = 51;
-            this.dataGridBook.RowTemplate.Height = 24;
-            this.dataGridBook.Size = new System.Drawing.Size(1265, 377);
-            this.dataGridBook.TabIndex = 0;
+            this.btnDeleteBook.BackColor = System.Drawing.Color.IndianRed;
+            this.btnDeleteBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDeleteBook.Location = new System.Drawing.Point(749, 191);
+            this.btnDeleteBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Size = new System.Drawing.Size(88, 29);
+            this.btnDeleteBook.TabIndex = 24;
+            this.btnDeleteBook.Text = "Delete";
+            this.btnDeleteBook.UseVisualStyleBackColor = false;
+            this.btnDeleteBook.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtSearchBook
+            // btnUpdateBook
             // 
-            this.txtSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBook.Location = new System.Drawing.Point(115, 3);
-            this.txtSearchBook.Name = "txtSearchBook";
-            this.txtSearchBook.Size = new System.Drawing.Size(201, 30);
-            this.txtSearchBook.TabIndex = 27;
+            this.btnUpdateBook.BackColor = System.Drawing.Color.BurlyWood;
+            this.btnUpdateBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdateBook.Location = new System.Drawing.Point(631, 191);
+            this.btnUpdateBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateBook.Name = "btnUpdateBook";
+            this.btnUpdateBook.Size = new System.Drawing.Size(101, 29);
+            this.btnUpdateBook.TabIndex = 23;
+            this.btnUpdateBook.Text = "Update";
+            this.btnUpdateBook.UseVisualStyleBackColor = false;
             // 
-            // label11
+            // btnAddBook
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(28, 7);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 25);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "Search:";
+            this.btnAddBook.BackColor = System.Drawing.Color.BurlyWood;
+            this.btnAddBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddBook.Location = new System.Drawing.Point(517, 191);
+            this.btnAddBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(97, 29);
+            this.btnAddBook.TabIndex = 22;
+            this.btnAddBook.Text = "Add";
+            this.btnAddBook.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(254, 174);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 20);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Description:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(21, 174);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 20);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Shelf: ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(760, 124);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 20);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Quantity:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(524, 121);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Publish Year: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(254, 119);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 20);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Publisher: ";
+            // 
+            // comboBookCategory
+            // 
+            this.comboBookCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBookCategory.FormattingEnabled = true;
+            this.comboBookCategory.Location = new System.Drawing.Point(88, 115);
+            this.comboBookCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBookCategory.Name = "comboBookCategory";
+            this.comboBookCategory.Size = new System.Drawing.Size(162, 28);
+            this.comboBookCategory.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 118);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Category:";
+            // 
+            // comboBookAuthor
+            // 
+            this.comboBookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBookAuthor.FormattingEnabled = true;
+            this.comboBookAuthor.Location = new System.Drawing.Point(736, 62);
+            this.comboBookAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBookAuthor.Name = "comboBookAuthor";
+            this.comboBookAuthor.Size = new System.Drawing.Size(201, 28);
+            this.comboBookAuthor.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(671, 64);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Author: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(260, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Title:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(9, 8);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(239, 26);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "BOOK MANAGEMENT";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ISBN:";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtSearchBook);
+            this.panel2.Controls.Add(this.btnSearchBook);
+            this.panel2.Controls.Add(this.dataGridBook);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 228);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(953, 352);
+            this.panel2.TabIndex = 1;
             // 
             // btnSearchBook
             // 
             this.btnSearchBook.BackColor = System.Drawing.Color.BurlyWood;
             this.btnSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSearchBook.Location = new System.Drawing.Point(343, 3);
+            this.btnSearchBook.Location = new System.Drawing.Point(257, 2);
+            this.btnSearchBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchBook.Name = "btnSearchBook";
-            this.btnSearchBook.Size = new System.Drawing.Size(129, 36);
+            this.btnSearchBook.Size = new System.Drawing.Size(97, 29);
             this.btnSearchBook.TabIndex = 26;
             this.btnSearchBook.Text = "Search";
             this.btnSearchBook.UseVisualStyleBackColor = false;
             // 
+            // dataGridBook
+            // 
+            this.dataGridBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridBook.Location = new System.Drawing.Point(2, 46);
+            this.dataGridBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridBook.Name = "dataGridBook";
+            this.dataGridBook.RowHeadersWidth = 51;
+            this.dataGridBook.RowTemplate.Height = 24;
+            this.dataGridBook.Size = new System.Drawing.Size(949, 304);
+            this.dataGridBook.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(21, 6);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 20);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Search:";
+            // 
+            // txtBookISBN
+            // 
+            this.txtBookISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookISBN.Location = new System.Drawing.Point(77, 58);
+            this.txtBookISBN.Name = "txtBookISBN";
+            this.txtBookISBN.Size = new System.Drawing.Size(173, 26);
+            this.txtBookISBN.TabIndex = 31;
+            // 
+            // txtBookTitle
+            // 
+            this.txtBookTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookTitle.Location = new System.Drawing.Point(307, 59);
+            this.txtBookTitle.Name = "txtBookTitle";
+            this.txtBookTitle.Size = new System.Drawing.Size(359, 26);
+            this.txtBookTitle.TabIndex = 32;
+            // 
+            // txtBookPublisher
+            // 
+            this.txtBookPublisher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookPublisher.Location = new System.Drawing.Point(341, 116);
+            this.txtBookPublisher.Name = "txtBookPublisher";
+            this.txtBookPublisher.Size = new System.Drawing.Size(173, 26);
+            this.txtBookPublisher.TabIndex = 33;
+            // 
+            // txtBookPublishYear
+            // 
+            this.txtBookPublishYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookPublishYear.Location = new System.Drawing.Point(631, 116);
+            this.txtBookPublishYear.Name = "txtBookPublishYear";
+            this.txtBookPublishYear.Size = new System.Drawing.Size(124, 26);
+            this.txtBookPublishYear.TabIndex = 34;
+            // 
+            // txtBookQty
+            // 
+            this.txtBookQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookQty.Location = new System.Drawing.Point(837, 121);
+            this.txtBookQty.Name = "txtBookQty";
+            this.txtBookQty.Size = new System.Drawing.Size(100, 26);
+            this.txtBookQty.TabIndex = 35;
+            // 
+            // txtBookShelf
+            // 
+            this.txtBookShelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookShelf.Location = new System.Drawing.Point(77, 174);
+            this.txtBookShelf.Name = "txtBookShelf";
+            this.txtBookShelf.Size = new System.Drawing.Size(173, 26);
+            this.txtBookShelf.TabIndex = 36;
+            // 
+            // txtBookDescription
+            // 
+            this.txtBookDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookDescription.Location = new System.Drawing.Point(352, 171);
+            this.txtBookDescription.Multiline = true;
+            this.txtBookDescription.Name = "txtBookDescription";
+            this.txtBookDescription.Size = new System.Drawing.Size(160, 49);
+            this.txtBookDescription.TabIndex = 37;
+            // 
+            // txtSearchBook
+            // 
+            this.txtSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBook.Location = new System.Drawing.Point(88, 3);
+            this.txtSearchBook.Name = "txtSearchBook";
+            this.txtSearchBook.Size = new System.Drawing.Size(160, 26);
+            this.txtSearchBook.TabIndex = 38;
+            // 
             // BookControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BookControl";
-            this.Size = new System.Drawing.Size(1271, 714);
+            this.Size = new System.Drawing.Size(953, 580);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -389,32 +412,32 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.MaskedTextBox txtISBN;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboCategory;
+        private System.Windows.Forms.ComboBox comboBookCategory;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboAuthor;
+        private System.Windows.Forms.ComboBox comboBookAuthor;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox txtTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox txtQty;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox txtPublishYear;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox txtPublisher;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textDescription;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox txtShelf;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnDeleteBook;
         private System.Windows.Forms.Button btnUpdateBook;
         private System.Windows.Forms.Button btnClearBook;
         private System.Windows.Forms.Button btnSearchBook;
-        private System.Windows.Forms.MaskedTextBox txtSearchBook;
         private System.Windows.Forms.DataGridView dataGridBook;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtBookDescription;
+        private System.Windows.Forms.TextBox txtBookShelf;
+        private System.Windows.Forms.TextBox txtBookQty;
+        private System.Windows.Forms.TextBox txtBookPublishYear;
+        private System.Windows.Forms.TextBox txtBookPublisher;
+        private System.Windows.Forms.TextBox txtBookTitle;
+        private System.Windows.Forms.TextBox txtBookISBN;
+        private System.Windows.Forms.TextBox txtSearchBook;
     }
 }
