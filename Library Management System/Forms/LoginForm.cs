@@ -61,6 +61,8 @@ namespace Library_Management_System
                                 mainForm.ShowDialog();
                             }
                             this.Show();
+                            txtPassword.Clear();
+                            txtUsername.Clear();
                         }
                         else
                         {

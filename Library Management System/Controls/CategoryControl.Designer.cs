@@ -31,18 +31,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCategoryDescription = new System.Windows.Forms.TextBox();
+            this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.btnClearCategory = new System.Windows.Forms.Button();
             this.btnDeleteCategory = new System.Windows.Forms.Button();
             this.btnUpdateCategory = new System.Windows.Forms.Button();
             this.btnAddCategory = new System.Windows.Forms.Button();
+            this.txtCategoryDescription = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtSearchCategory = new System.Windows.Forms.TextBox();
             this.btnSearchCategory = new System.Windows.Forms.Button();
             this.dataGridCategory = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.txtSearchCategory = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategory)).BeginInit();
@@ -63,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 76);
+            this.label1.Location = new System.Drawing.Point(36, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 20);
@@ -87,35 +87,23 @@
             this.panel1.Size = new System.Drawing.Size(953, 188);
             this.panel1.TabIndex = 9;
             // 
-            // label2
+            // txtCategoryName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(462, 71);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = " Description:";
-            // 
-            // txtCategoryDescription
-            // 
-            this.txtCategoryDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoryDescription.Location = new System.Drawing.Point(564, 73);
-            this.txtCategoryDescription.Multiline = true;
-            this.txtCategoryDescription.Name = "txtCategoryDescription";
-            this.txtCategoryDescription.Size = new System.Drawing.Size(351, 68);
-            this.txtCategoryDescription.TabIndex = 10;
+            this.txtCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoryName.Location = new System.Drawing.Point(164, 58);
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.Size = new System.Drawing.Size(293, 26);
+            this.txtCategoryName.TabIndex = 30;
             // 
             // btnClearCategory
             // 
             this.btnClearCategory.BackColor = System.Drawing.Color.BurlyWood;
             this.btnClearCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClearCategory.Location = new System.Drawing.Point(378, 132);
+            this.btnClearCategory.Location = new System.Drawing.Point(720, 143);
             this.btnClearCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearCategory.Name = "btnClearCategory";
-            this.btnClearCategory.Size = new System.Drawing.Size(82, 29);
+            this.btnClearCategory.Size = new System.Drawing.Size(195, 30);
             this.btnClearCategory.TabIndex = 29;
             this.btnClearCategory.Text = "Clear";
             this.btnClearCategory.UseVisualStyleBackColor = false;
@@ -125,10 +113,10 @@
             this.btnDeleteCategory.BackColor = System.Drawing.Color.IndianRed;
             this.btnDeleteCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeleteCategory.Location = new System.Drawing.Point(273, 132);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(487, 143);
             this.btnDeleteCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
-            this.btnDeleteCategory.Size = new System.Drawing.Size(88, 29);
+            this.btnDeleteCategory.Size = new System.Drawing.Size(195, 30);
             this.btnDeleteCategory.TabIndex = 28;
             this.btnDeleteCategory.Text = "Delete";
             this.btnDeleteCategory.UseVisualStyleBackColor = false;
@@ -138,10 +126,10 @@
             this.btnUpdateCategory.BackColor = System.Drawing.Color.BurlyWood;
             this.btnUpdateCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUpdateCategory.Location = new System.Drawing.Point(153, 132);
+            this.btnUpdateCategory.Location = new System.Drawing.Point(262, 143);
             this.btnUpdateCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateCategory.Name = "btnUpdateCategory";
-            this.btnUpdateCategory.Size = new System.Drawing.Size(101, 29);
+            this.btnUpdateCategory.Size = new System.Drawing.Size(195, 30);
             this.btnUpdateCategory.TabIndex = 27;
             this.btnUpdateCategory.Text = "Update";
             this.btnUpdateCategory.UseVisualStyleBackColor = false;
@@ -151,13 +139,33 @@
             this.btnAddCategory.BackColor = System.Drawing.Color.BurlyWood;
             this.btnAddCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddCategory.Location = new System.Drawing.Point(41, 132);
+            this.btnAddCategory.Location = new System.Drawing.Point(25, 143);
             this.btnAddCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(97, 29);
+            this.btnAddCategory.Size = new System.Drawing.Size(195, 30);
             this.btnAddCategory.TabIndex = 26;
             this.btnAddCategory.Text = "Add";
             this.btnAddCategory.UseVisualStyleBackColor = false;
+            // 
+            // txtCategoryDescription
+            // 
+            this.txtCategoryDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoryDescription.Location = new System.Drawing.Point(564, 61);
+            this.txtCategoryDescription.Multiline = true;
+            this.txtCategoryDescription.Name = "txtCategoryDescription";
+            this.txtCategoryDescription.Size = new System.Drawing.Size(351, 68);
+            this.txtCategoryDescription.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(462, 59);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = " Description:";
             // 
             // panel2
             // 
@@ -172,6 +180,14 @@
             this.panel2.Size = new System.Drawing.Size(953, 387);
             this.panel2.TabIndex = 10;
             // 
+            // txtSearchCategory
+            // 
+            this.txtSearchCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchCategory.Location = new System.Drawing.Point(90, 6);
+            this.txtSearchCategory.Name = "txtSearchCategory";
+            this.txtSearchCategory.Size = new System.Drawing.Size(173, 26);
+            this.txtSearchCategory.TabIndex = 37;
+            // 
             // btnSearchCategory
             // 
             this.btnSearchCategory.BackColor = System.Drawing.Color.BurlyWood;
@@ -180,7 +196,7 @@
             this.btnSearchCategory.Location = new System.Drawing.Point(273, 2);
             this.btnSearchCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchCategory.Name = "btnSearchCategory";
-            this.btnSearchCategory.Size = new System.Drawing.Size(97, 29);
+            this.btnSearchCategory.Size = new System.Drawing.Size(111, 29);
             this.btnSearchCategory.TabIndex = 26;
             this.btnSearchCategory.Text = "Search";
             this.btnSearchCategory.UseVisualStyleBackColor = false;
@@ -206,22 +222,6 @@
             this.label11.Size = new System.Drawing.Size(64, 20);
             this.label11.TabIndex = 26;
             this.label11.Text = "Search:";
-            // 
-            // txtCategoryName
-            // 
-            this.txtCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoryName.Location = new System.Drawing.Point(164, 70);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(293, 26);
-            this.txtCategoryName.TabIndex = 30;
-            // 
-            // txtSearchCategory
-            // 
-            this.txtSearchCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchCategory.Location = new System.Drawing.Point(90, 6);
-            this.txtSearchCategory.Name = "txtSearchCategory";
-            this.txtSearchCategory.Size = new System.Drawing.Size(173, 26);
-            this.txtSearchCategory.TabIndex = 37;
             // 
             // CategoryControl
             // 

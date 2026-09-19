@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -58,6 +60,12 @@
     <Compile Include="Controls\BookControl.Designer.cs">
       <DependentUpon>BookControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BorrowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BorrowControl.Designer.cs">
+      <DependentUpon>BorrowControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CategoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +77,24 @@
     </Compile>
     <Compile Include="Controls\DashboardControl.Designer.cs">
       <DependentUpon>DashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MemberControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MemberControl.Designer.cs">
+      <DependentUpon>MemberControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportControl.Designer.cs">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReturnControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReturnControl.Designer.cs">
+      <DependentUpon>ReturnControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\DatabaseConnection.cs" />
     <Compile Include="Forms\LoginForm.cs">
@@ -92,11 +118,23 @@
     <EmbeddedResource Include="Controls\BookControl.resx">
       <DependentUpon>BookControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BorrowControl.resx">
+      <DependentUpon>BorrowControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CategoryControl.resx">
       <DependentUpon>CategoryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\DashboardControl.resx">
       <DependentUpon>DashboardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MemberControl.resx">
+      <DependentUpon>MemberControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReturnControl.resx">
+      <DependentUpon>ReturnControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
