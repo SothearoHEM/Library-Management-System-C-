@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AuthorBLL.cs" />
+    <Compile Include="BLL\BookBLL.cs" />
+    <Compile Include="BLL\BorrowBLL.cs" />
+    <Compile Include="BLL\CategoryBLL.cs" />
+    <Compile Include="BLL\MemberBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="Controls\AuthorControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     <Compile Include="Controls\ReturnControl.Designer.cs">
       <DependentUpon>ReturnControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAL\AuthorDAL.cs" />
+    <Compile Include="DAL\BookDAL.cs" />
+    <Compile Include="DAL\BorrowDAL.cs" />
+    <Compile Include="DAL\CategoryDAL.cs" />
+    <Compile Include="DAL\MemberDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="Data\DatabaseConnection.cs" />
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -110,6 +122,16 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Borrowing.cs" />
+    <Compile Include="Models\BorrowingDetail.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ICrud.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Return.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\AuthorControl.resx">
