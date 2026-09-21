@@ -31,7 +31,7 @@ namespace LibraryManagementSystem.DAL
             var list = new List<User>();
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("SELECT * FROM Users", conn))
+                using (var cmd = new SqlCommand("SELECT * FROM Users WHERE IsDeleted = 0", conn))
                 {
                     conn.Open();
                     using (var reader = cmd.ExecuteReader())
@@ -47,8 +47,8 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                string sql = @"INSERT INTO Users (FullName, Username, Password, Role, Phone, Email, IsActive)
-                               VALUES (@FullName, @Username, @Password, @Role, @Phone, @Email, @IsActive)";
+                string sql = @"INSERT INTO Users (FullName, Username, Password, Role, Phone, Email, IsActive, IsDeleted)
+                               VALUES (@FullName, @Username, @Password, @Role, @Phone, @Email, @IsActive, 0)";
                 using (var cmd = new SqlCommand(sql, conn))
                 {
                     AddParams(cmd, u);
@@ -78,7 +78,7 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("DELETE FROM Users WHERE UserID=@id", conn))
+                using (var cmd = new SqlCommand("UPDATE Users SET IsDeleted = 1 WHERE UserID=@id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", userId);
                     conn.Open();

@@ -11,7 +11,8 @@ namespace LibraryManagementSystem.DAL
             SELECT b.*, a.AuthorName, c.CategoryName
             FROM Books b
             JOIN Authors a ON b.AuthorID = a.AuthorID
-            JOIN Categories c ON b.CategoryID = c.CategoryID";
+            JOIN Categories c ON b.CategoryID = c.CategoryID
+            WHERE b.IsDeleted = 0";
 
         public List<Book> GetAllBooks()
         {
@@ -36,7 +37,7 @@ namespace LibraryManagementSystem.DAL
             var list = new List<Book>();
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand(BaseSelect + " WHERE b.Title LIKE @t", conn))
+                using (var cmd = new SqlCommand(BaseSelect + " AND b.Title LIKE @t", conn))
                 {
                     cmd.Parameters.AddWithValue("@t", "%" + title + "%");
                     conn.Open();
@@ -55,7 +56,7 @@ namespace LibraryManagementSystem.DAL
             var list = new List<Book>();
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand(BaseSelect + " WHERE b.Title LIKE @t AND b.CategoryID=@c", conn))
+                using (var cmd = new SqlCommand(BaseSelect + " AND b.Title LIKE @t AND b.CategoryID=@c", conn))
                 {
                     cmd.Parameters.AddWithValue("@t", "%" + title + "%");
                     cmd.Parameters.AddWithValue("@c", categoryId);
@@ -108,7 +109,7 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("DELETE FROM Books WHERE BookID=@id", conn))
+                using (var cmd = new SqlCommand("UPDATE Books SET IsDeleted = 1 WHERE BookID=@id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", bookId);
                     conn.Open();
@@ -138,6 +139,7 @@ namespace LibraryManagementSystem.DAL
             cmd.Parameters.AddWithValue("@AvailableQuantity", b.AvailableQuantity);
             cmd.Parameters.AddWithValue("@ShelfLocation", (object)b.ShelfLocation ?? "");
             cmd.Parameters.AddWithValue("@Description", (object)b.Description ?? "");
+            cmd.Parameters.AddWithValue("@IsDeleted", b.IsDeleted);
         }
 
         private Book MapReaderToBook(SqlDataReader reader)

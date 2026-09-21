@@ -203,6 +203,7 @@
             // 
             // dataGridCategory
             // 
+            this.dataGridCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCategory.Location = new System.Drawing.Point(2, 46);
             this.dataGridCategory.Margin = new System.Windows.Forms.Padding(2);

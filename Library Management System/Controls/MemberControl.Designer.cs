@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMemberAddress = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtMemberPhone = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateMemberDOB = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMemberEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,11 +48,6 @@
             this.btnAddMember = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateMemberDOB = new System.Windows.Forms.DateTimePicker();
-            this.txtMemberPhone = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtMemberAddress = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtSearchMember = new System.Windows.Forms.TextBox();
             this.btnSearchMember = new System.Windows.Forms.Button();
@@ -84,6 +84,52 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(953, 251);
             this.panel1.TabIndex = 11;
+            // 
+            // txtMemberAddress
+            // 
+            this.txtMemberAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMemberAddress.Location = new System.Drawing.Point(128, 174);
+            this.txtMemberAddress.Name = "txtMemberAddress";
+            this.txtMemberAddress.Size = new System.Drawing.Size(796, 26);
+            this.txtMemberAddress.TabIndex = 42;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(51, 180);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 20);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Address:";
+            // 
+            // txtMemberPhone
+            // 
+            this.txtMemberPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMemberPhone.Location = new System.Drawing.Point(545, 136);
+            this.txtMemberPhone.Name = "txtMemberPhone";
+            this.txtMemberPhone.Size = new System.Drawing.Size(379, 26);
+            this.txtMemberPhone.TabIndex = 40;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(481, 139);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 20);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Phone:";
+            // 
+            // dateMemberDOB
+            // 
+            this.dateMemberDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateMemberDOB.Location = new System.Drawing.Point(545, 98);
+            this.dateMemberDOB.Name = "dateMemberDOB";
+            this.dateMemberDOB.Size = new System.Drawing.Size(379, 26);
+            this.dateMemberDOB.TabIndex = 38;
             // 
             // label5
             // 
@@ -138,6 +184,9 @@
             // 
             this.comboMemberGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboMemberGender.FormattingEnabled = true;
+            this.comboMemberGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.comboMemberGender.Location = new System.Drawing.Point(128, 96);
             this.comboMemberGender.Name = "comboMemberGender";
             this.comboMemberGender.Size = new System.Drawing.Size(293, 28);
@@ -236,52 +285,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Member Code:";
             // 
-            // dateMemberDOB
-            // 
-            this.dateMemberDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateMemberDOB.Location = new System.Drawing.Point(545, 98);
-            this.dateMemberDOB.Name = "dateMemberDOB";
-            this.dateMemberDOB.Size = new System.Drawing.Size(379, 26);
-            this.dateMemberDOB.TabIndex = 38;
-            // 
-            // txtMemberPhone
-            // 
-            this.txtMemberPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMemberPhone.Location = new System.Drawing.Point(545, 136);
-            this.txtMemberPhone.Name = "txtMemberPhone";
-            this.txtMemberPhone.Size = new System.Drawing.Size(379, 26);
-            this.txtMemberPhone.TabIndex = 40;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(481, 139);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 20);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "Phone:";
-            // 
-            // txtMemberAddress
-            // 
-            this.txtMemberAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMemberAddress.Location = new System.Drawing.Point(128, 174);
-            this.txtMemberAddress.Name = "txtMemberAddress";
-            this.txtMemberAddress.Size = new System.Drawing.Size(796, 26);
-            this.txtMemberAddress.TabIndex = 42;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(51, 180);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 20);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Address:";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtSearchMember);
@@ -318,6 +321,7 @@
             // 
             // dataGridMember
             // 
+            this.dataGridMember.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridMember.Location = new System.Drawing.Point(2, 46);
             this.dataGridMember.Margin = new System.Windows.Forms.Padding(2);

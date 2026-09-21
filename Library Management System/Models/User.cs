@@ -11,5 +11,6 @@ namespace LibraryManagementSystem.Models
         public string Password { get; set; }
         public string Role { get; set; }     // Admin / Staff
         public bool IsActive { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

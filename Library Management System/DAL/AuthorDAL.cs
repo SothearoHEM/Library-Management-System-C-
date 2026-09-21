@@ -12,7 +12,7 @@ namespace LibraryManagementSystem.DAL
             var list = new List<Author>();
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                var cmd = new SqlCommand("SELECT * FROM Authors", conn);
+                var cmd = new SqlCommand("SELECT AuthorID, AuthorName, Gender, Phone, Email, Description, IsDeleted FROM Authors WHERE IsDeleted = 0", conn);
                 conn.Open();
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -23,7 +23,8 @@ namespace LibraryManagementSystem.DAL
                         Gender = reader["Gender"].ToString(),
                         Phone = reader["Phone"].ToString(),
                         Email = reader["Email"].ToString(),
-                        Description = reader["Description"].ToString()
+                            Description = reader["Description"].ToString(),
+                            IsDeleted = reader["IsDeleted"] != System.DBNull.Value && (bool)reader["IsDeleted"]
                     });
             }
             return list;
@@ -33,7 +34,7 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                string sql = "INSERT INTO Authors (AuthorName, Gender, Phone, Email, Description) VALUES (@n,@g,@p,@e,@d)";
+                string sql = "INSERT INTO Authors (AuthorName, Gender, Phone, Email, Description, IsDeleted) VALUES (@n,@g,@p,@e,@d,0)";
                 using (var cmd = new SqlCommand(sql, conn))
                 {
                     AddParams(cmd, a);
@@ -62,7 +63,7 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("DELETE FROM Authors WHERE AuthorID=@id", conn))
+                using (var cmd = new SqlCommand("UPDATE Authors SET IsDeleted = 1 WHERE AuthorID=@id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
                     conn.Open();
@@ -78,6 +79,7 @@ namespace LibraryManagementSystem.DAL
             cmd.Parameters.AddWithValue("@p", (object)a.Phone ?? "");
             cmd.Parameters.AddWithValue("@e", (object)a.Email ?? "");
             cmd.Parameters.AddWithValue("@d", (object)a.Description ?? "");
+            cmd.Parameters.AddWithValue("@isDeleted", a.IsDeleted);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace LibraryManagementSystem.DAL
             var list = new List<Category>();
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("SELECT * FROM Categories", conn))
+                using (var cmd = new SqlCommand("SELECT * FROM Categories WHERE IsDeleted = 0", conn))
                 {
                     conn.Open();
                     using (var reader = cmd.ExecuteReader())
@@ -34,7 +34,7 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("INSERT INTO Categories (CategoryName, Description) VALUES (@n, @d)", conn))
+                using (var cmd = new SqlCommand("INSERT INTO Categories (CategoryName, Description, IsDeleted) VALUES (@n, @d, 0)", conn))
                 {
                     cmd.Parameters.AddWithValue("@n", c.CategoryName);
                     cmd.Parameters.AddWithValue("@d", (object)c.Description ?? "");
@@ -63,7 +63,7 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("DELETE FROM Categories WHERE CategoryID=@id", conn))
+                using (var cmd = new SqlCommand("UPDATE Categories SET IsDeleted = 1 WHERE CategoryID=@id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
                     conn.Open();

@@ -13,7 +13,7 @@ namespace LibraryManagementSystem.DAL
             var list = new List<Member>();
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("SELECT * FROM Members", conn))
+                using (var cmd = new SqlCommand("SELECT * FROM Members WHERE IsDeleted = 0", conn))
                 {
                     conn.Open();
                     using (var reader = cmd.ExecuteReader())
@@ -30,7 +30,7 @@ namespace LibraryManagementSystem.DAL
             var list = new List<Member>();
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("SELECT * FROM Members WHERE FullName LIKE @k OR MemberCode LIKE @k", conn))
+                using (var cmd = new SqlCommand("SELECT * FROM Members WHERE IsDeleted = 0 AND (FullName LIKE @k OR MemberCode LIKE @k)", conn))
                 {
                     cmd.Parameters.AddWithValue("@k", "%" + keyword + "%");
                     conn.Open();
@@ -47,8 +47,8 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                string sql = @"INSERT INTO Members (MemberCode, FullName, Gender, DateOfBirth, Phone, Email, Address, RegisterDate, IsActive)
-                               VALUES (@Code,@Name,@Gender,@Dob,@Phone,@Email,@Address,@RegDate,@Active)";
+                string sql = @"INSERT INTO Members (MemberCode, FullName, Gender, DateOfBirth, Phone, Email, Address, RegisterDate, IsActive, IsDeleted)
+                               VALUES (@Code,@Name,@Gender,@Dob,@Phone,@Email,@Address,@RegDate,@Active,0)";
                 using (var cmd = new SqlCommand(sql, conn))
                 {
                     AddParams(cmd, m);
@@ -78,7 +78,7 @@ namespace LibraryManagementSystem.DAL
         {
             using (var conn = new DatabaseConnection().GetConnection())
             {
-                using (var cmd = new SqlCommand("DELETE FROM Members WHERE MemberID=@id", conn))
+                using (var cmd = new SqlCommand("UPDATE Members SET IsDeleted = 1 WHERE MemberID=@id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", memberId);
                     conn.Open();

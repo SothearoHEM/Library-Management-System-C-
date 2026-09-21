@@ -19,5 +19,6 @@ namespace LibraryManagementSystem.Models
         public int AvailableQuantity { get; set; }
         public string ShelfLocation { get; set; }
         public string Description { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

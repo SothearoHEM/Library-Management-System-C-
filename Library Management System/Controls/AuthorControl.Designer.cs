@@ -136,6 +136,9 @@
             // 
             this.comboAuthorGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboAuthorGender.FormattingEnabled = true;
+            this.comboAuthorGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.comboAuthorGender.Location = new System.Drawing.Point(571, 53);
             this.comboAuthorGender.Name = "comboAuthorGender";
             this.comboAuthorGender.Size = new System.Drawing.Size(353, 28);
@@ -246,6 +249,7 @@
             // 
             // dataGridAuthor
             // 
+            this.dataGridAuthor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAuthor.Location = new System.Drawing.Point(2, 2);
             this.dataGridAuthor.Margin = new System.Windows.Forms.Padding(2);

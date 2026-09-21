@@ -15,7 +15,7 @@ namespace LibraryManagementSystem.BLL
         public void Add()
         {
             if (string.IsNullOrWhiteSpace(CurrentBook.Title))
-                throw new System.Exception("ចំណងជើងសៀវភៅមិនអាចទទេបានទេ!");
+                throw new System.Exception("Title can not be empty");
             CurrentBook.AvailableQuantity = CurrentBook.Quantity; // សៀវភៅថ្មី = នៅសល់ស្មើនឹងសរុប
             dal.AddBook(CurrentBook);
         }
