@@ -166,7 +166,7 @@ namespace Library_Management_System.Controls
             }
             catch (Exception ex)
             {
-                // Silently fail if grid formatting fails - grid will still show data
+                MessageBox.Show("Error formatting statistics grid: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
