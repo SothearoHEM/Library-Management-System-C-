@@ -120,6 +120,12 @@
     <Compile Include="Controls\ReturnControl.Designer.cs">
       <DependentUpon>ReturnControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UserMaControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserMaControl1.Designer.cs">
+      <DependentUpon>UserMaControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\AuthorDAL.cs" />
     <Compile Include="DAL\BookDAL.cs" />
     <Compile Include="DAL\BorrowDAL.cs" />
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ReturnControl.resx">
       <DependentUpon>ReturnControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserMaControl1.resx">
+      <DependentUpon>UserMaControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

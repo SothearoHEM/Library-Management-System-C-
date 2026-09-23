@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +42,13 @@ namespace Library_Management_System.Controls
 
         private void BtnAddCategory_Click(object sender, EventArgs e)
         {
+            string validationError = ValidateCategoryForm();
+            if (validationError != null)
+            {
+                MessageBox.Show(validationError, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var c = new LibraryManagementSystem.Models.Category
@@ -68,6 +75,14 @@ namespace Library_Management_System.Controls
                 MessageBox.Show("Please select a category to update.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            string validationError = ValidateCategoryForm();
+            if (validationError != null)
+            {
+                MessageBox.Show(validationError, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var c = new LibraryManagementSystem.Models.Category
@@ -129,6 +144,13 @@ namespace Library_Management_System.Controls
             txtCategoryName.Clear();
             txtCategoryDescription.Clear();
             txtSearchCategory.Clear();
+        }
+
+        private string ValidateCategoryForm()
+        {
+            if (string.IsNullOrWhiteSpace(txtCategoryName.Text))
+                return "Category Name is required.";
+            return null;
         }
 
         private void DataGridCategory_CellClick(object sender, DataGridViewCellEventArgs e)

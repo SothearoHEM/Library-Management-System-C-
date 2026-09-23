@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +42,13 @@ namespace Library_Management_System.Controls
 
         private void BtnAddMember_Click(object sender, EventArgs e)
         {
+            string validationError = ValidateMemberForm();
+            if (validationError != null)
+            {
+                MessageBox.Show(validationError, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var m = new LibraryManagementSystem.Models.Member
@@ -74,6 +81,14 @@ namespace Library_Management_System.Controls
                 MessageBox.Show("Please select a member to update.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            string validationError = ValidateMemberForm();
+            if (validationError != null)
+            {
+                MessageBox.Show(validationError, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var m = new LibraryManagementSystem.Models.Member
@@ -146,6 +161,17 @@ namespace Library_Management_System.Controls
             dateMemberDOB.Value = DateTime.Now;
             txtSearchMember.Clear();
             if (comboMemberGender.Items.Count > 0) comboMemberGender.SelectedIndex = 0;
+        }
+
+        private string ValidateMemberForm()
+        {
+            if (string.IsNullOrWhiteSpace(txtMemberCode.Text))
+                return "Member Code is required.";
+            if (string.IsNullOrWhiteSpace(txtMemberFullName.Text))
+                return "Full Name is required.";
+            if (comboMemberGender.SelectedItem == null)
+                return "Gender is required.";
+            return null;
         }
 
         private void DataGridMember_CellClick(object sender, DataGridViewCellEventArgs e)

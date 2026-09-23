@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +41,13 @@ namespace Library_Management_System.Controls
 
         private void BtnAddAuthor_Click(object sender, EventArgs e)
         {
+            string validationError = ValidateAuthorForm();
+            if (validationError != null)
+            {
+                MessageBox.Show(validationError, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var a = new LibraryManagementSystem.Models.Author
@@ -70,6 +77,14 @@ namespace Library_Management_System.Controls
                 MessageBox.Show("Please select an author to update.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            string validationError = ValidateAuthorForm();
+            if (validationError != null)
+            {
+                MessageBox.Show(validationError, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var a = new LibraryManagementSystem.Models.Author
@@ -129,6 +144,15 @@ namespace Library_Management_System.Controls
             txtAuthorEmail.Clear();
             txtAuthorDescription.Clear();
             if (comboAuthorGender.Items.Count > 0) comboAuthorGender.SelectedIndex = 0;
+        }
+
+        private string ValidateAuthorForm()
+        {
+            if (string.IsNullOrWhiteSpace(txtAuthorName.Text))
+                return "Author Name is required.";
+            if (comboAuthorGender.SelectedItem == null)
+                return "Gender is required.";
+            return null;
         }
 
         private void DataGridAuthor_CellClick(object sender, DataGridViewCellEventArgs e)

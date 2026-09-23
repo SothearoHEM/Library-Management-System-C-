@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using LibraryManagementSystem.BLL;
@@ -11,7 +11,8 @@ namespace Library_Management_System.Controls
         private readonly BookBLL bookBLL = new BookBLL();
         private readonly AuthorBLL authorBLL = new AuthorBLL();
         private readonly CategoryBLL categoryBLL = new CategoryBLL();
-        private int selectedBookId = 0;
+        private int selectedBookId = 0;   
+        private bool _showingError = false;
 
         public BookControl()
         {
@@ -74,18 +75,25 @@ namespace Library_Management_System.Controls
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
+            string validationError = ValidateBookForm();
+            if (validationError != null)
+            {
+                MessageBox.Show(validationError, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var b = ReadBookFromForm();
                 bookBLL.CurrentBook = b;
                 bookBLL.Add();
-                MessageBox.Show("Book added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadBooks();
                 ClearForm();
+                MessageBox.Show("Book added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowErrorPopup(ex);
             }
         }
 
@@ -97,6 +105,13 @@ namespace Library_Management_System.Controls
                 return;
             }
 
+            string validationError = ValidateBookForm();
+            if (validationError != null)
+            {
+                MessageBox.Show(validationError, "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 var b = ReadBookFromForm();
@@ -105,13 +120,13 @@ namespace Library_Management_System.Controls
                 b.AvailableQuantity = b.Quantity;
                 bookBLL.CurrentBook = b;
                 bookBLL.Update();
-                MessageBox.Show("Book updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadBooks();
                 ClearForm();
+                MessageBox.Show("Book updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowErrorPopup(ex);
             }
         }
 
@@ -130,13 +145,13 @@ namespace Library_Management_System.Controls
             {
                 bookBLL.CurrentBook = new Book { BookID = selectedBookId };
                 bookBLL.Delete();
-                MessageBox.Show("Book deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadBooks();
                 ClearForm();
+                MessageBox.Show("Book deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowErrorPopup(ex);
             }
         }
 
@@ -183,6 +198,35 @@ namespace Library_Management_System.Controls
             if (comboBookCategory.Items.Count > 0) comboBookCategory.SelectedIndex = 0;
         }
 
+        private string ValidateBookForm()
+        {
+            if (string.IsNullOrWhiteSpace(txtBookISBN.Text))
+                return "ISBN is required.";
+            if (string.IsNullOrWhiteSpace(txtBookTitle.Text))
+                return "Title is required.";
+            if (comboBookAuthor.SelectedItem == null)
+                return "Author is required.";
+            if (comboBookCategory.SelectedItem == null)
+                return "Category is required.";
+            return null;
+        }
+
+        private void ShowErrorPopup(Exception ex)
+        {
+            if (!_showingError)
+            {
+                _showingError = true;
+                try
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    _showingError = false;
+                }
+            }
+        }
+
         private void DataGridBook_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -224,3 +268,9 @@ namespace Library_Management_System.Controls
         }
     }
 }
+
+
+
+
+
+

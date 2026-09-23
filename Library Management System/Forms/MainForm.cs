@@ -31,6 +31,7 @@ namespace Library_Management_System.Forms
             borrowControl1.Visible = false;
             returnControl1.Visible = false;
             authorControl1.Visible = false;
+            userMaControl11.Visible = false;
             reportControl1.Visible = false;
         }
 
@@ -43,6 +44,7 @@ namespace Library_Management_System.Forms
             borrowControl1.Visible = false;
             returnControl1.Visible = false;
             authorControl1.Visible = false;
+            userMaControl11.Visible = false;
             reportControl1.Visible = false;
         }
 
@@ -55,6 +57,7 @@ namespace Library_Management_System.Forms
             borrowControl1.Visible = false;
             returnControl1.Visible = false;
             authorControl1.Visible = false;
+            userMaControl11.Visible = false;
             reportControl1.Visible = false;
         }
 
@@ -67,6 +70,7 @@ namespace Library_Management_System.Forms
             borrowControl1.Visible = false;
             returnControl1.Visible = false;
             authorControl1.Visible = true;
+            userMaControl11.Visible = false;
             reportControl1.Visible = false;
         }
 
@@ -79,6 +83,7 @@ namespace Library_Management_System.Forms
             borrowControl1.Visible = false;
             returnControl1.Visible = false;
             authorControl1.Visible = false;
+            userMaControl11.Visible = false;
             reportControl1.Visible = false;
         }
 
@@ -91,6 +96,7 @@ namespace Library_Management_System.Forms
             borrowControl1.Visible = true;
             returnControl1.Visible = false;
             authorControl1.Visible = false;
+            userMaControl11.Visible = false;
             reportControl1.Visible = false;
         }
 
@@ -103,6 +109,7 @@ namespace Library_Management_System.Forms
             borrowControl1.Visible = false;
             returnControl1.Visible = true;
             authorControl1.Visible = false;
+            userMaControl11.Visible = false;
             reportControl1.Visible = false;
         }
 
@@ -115,6 +122,7 @@ namespace Library_Management_System.Forms
             borrowControl1.Visible = false;
             returnControl1.Visible = false;
             authorControl1.Visible = false;
+            userMaControl11.Visible = false;
             reportControl1.Visible = true;
         }
 
@@ -126,6 +134,19 @@ namespace Library_Management_System.Forms
                 loginForm.Show();
                 this.Hide();
             }  
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            dashboardControl1.Visible = false;
+            bookControl1.Visible = false;
+            memberControl1.Visible = false;
+            categoryControl1.Visible = false;
+            borrowControl1.Visible = false;
+            returnControl1.Visible = false;
+            authorControl1.Visible = false;
+            userMaControl11.Visible = true;
+            reportControl1.Visible = false;
         }
     }
 }

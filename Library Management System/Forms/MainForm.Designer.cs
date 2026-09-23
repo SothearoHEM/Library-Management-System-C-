@@ -48,6 +48,8 @@
             this.authorControl1 = new Library_Management_System.Controls.AuthorControl();
             this.categoryControl1 = new Library_Management_System.Controls.CategoryControl();
             this.bookControl1 = new Library_Management_System.Controls.BookControl();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.userMaControl11 = new Library_Management_System.Controls.UserMaControl1();
             this.dashboardControl1 = new Library_Management_System.Controls.DashboardControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -56,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BurlyWood;
+            this.panel1.Controls.Add(this.btnUser);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnReports);
             this.panel1.Controls.Add(this.btnReturn);
@@ -66,7 +69,7 @@
             this.panel1.Controls.Add(this.btnBook);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 661);
             this.panel1.TabIndex = 0;
@@ -77,7 +80,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnLogout.Location = new System.Drawing.Point(10, 602);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(137, 37);
             this.btnLogout.TabIndex = 11;
@@ -90,8 +93,8 @@
             this.btnReports.BackColor = System.Drawing.Color.Linen;
             this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnReports.Location = new System.Drawing.Point(9, 463);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReports.Location = new System.Drawing.Point(9, 513);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(2);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(137, 37);
             this.btnReports.TabIndex = 10;
@@ -105,7 +108,7 @@
             this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnReturn.Location = new System.Drawing.Point(9, 406);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(137, 37);
             this.btnReturn.TabIndex = 9;
@@ -119,7 +122,7 @@
             this.btnBorrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrow.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBorrow.Location = new System.Drawing.Point(9, 353);
-            this.btnBorrow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBorrow.Margin = new System.Windows.Forms.Padding(2);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(137, 37);
             this.btnBorrow.TabIndex = 8;
@@ -133,7 +136,7 @@
             this.btnMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnMembers.Location = new System.Drawing.Point(9, 297);
-            this.btnMembers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMembers.Margin = new System.Windows.Forms.Padding(2);
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.Size = new System.Drawing.Size(137, 37);
             this.btnMembers.TabIndex = 7;
@@ -147,7 +150,7 @@
             this.btnAuthors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAuthors.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAuthors.Location = new System.Drawing.Point(10, 243);
-            this.btnAuthors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAuthors.Margin = new System.Windows.Forms.Padding(2);
             this.btnAuthors.Name = "btnAuthors";
             this.btnAuthors.Size = new System.Drawing.Size(137, 37);
             this.btnAuthors.TabIndex = 6;
@@ -161,7 +164,7 @@
             this.btnCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategories.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCategories.Location = new System.Drawing.Point(10, 193);
-            this.btnCategories.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCategories.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategories.Name = "btnCategories";
             this.btnCategories.Size = new System.Drawing.Size(137, 37);
             this.btnCategories.TabIndex = 5;
@@ -175,7 +178,7 @@
             this.btnBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBook.Location = new System.Drawing.Point(9, 136);
-            this.btnBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBook.Margin = new System.Windows.Forms.Padding(2);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(137, 37);
             this.btnBook.TabIndex = 4;
@@ -189,7 +192,7 @@
             this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDashboard.Location = new System.Drawing.Point(10, 76);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(137, 37);
             this.btnDashboard.TabIndex = 3;
@@ -203,7 +206,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(-1, -1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1125, 45);
             this.panel2.TabIndex = 1;
@@ -278,10 +281,31 @@
             // bookControl1
             // 
             this.bookControl1.Location = new System.Drawing.Point(162, 49);
-            this.bookControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.bookControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bookControl1.Name = "bookControl1";
             this.bookControl1.Size = new System.Drawing.Size(961, 611);
             this.bookControl1.TabIndex = 8;
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.Linen;
+            this.btnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUser.Location = new System.Drawing.Point(9, 459);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(137, 37);
+            this.btnUser.TabIndex = 12;
+            this.btnUser.Text = "User";
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
+            // userMaControl11
+            // 
+            this.userMaControl11.Location = new System.Drawing.Point(163, 49);
+            this.userMaControl11.Name = "userMaControl11";
+            this.userMaControl11.Size = new System.Drawing.Size(960, 611);
+            this.userMaControl11.TabIndex = 9;
             // 
             // dashboardControl1
             // 
@@ -289,7 +313,7 @@
             this.dashboardControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dashboardControl1.Name = "dashboardControl1";
             this.dashboardControl1.Size = new System.Drawing.Size(961, 612);
-            this.dashboardControl1.TabIndex = 9;
+            this.dashboardControl1.TabIndex = 10;
             // 
             // MainForm
             // 
@@ -297,6 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1124, 661);
             this.Controls.Add(this.dashboardControl1);
+            this.Controls.Add(this.userMaControl11);
             this.Controls.Add(this.bookControl1);
             this.Controls.Add(this.categoryControl1);
             this.Controls.Add(this.authorControl1);
@@ -307,7 +332,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -340,6 +365,8 @@
         private Controls.AuthorControl authorControl1;
         private Controls.CategoryControl categoryControl1;
         private Controls.BookControl bookControl1;
+        private System.Windows.Forms.Button btnUser;
+        private Controls.UserMaControl1 userMaControl11;
         private Controls.DashboardControl dashboardControl1;
     }
 }
