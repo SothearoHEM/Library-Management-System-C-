@@ -52,6 +52,14 @@ namespace Library_Management_System.Controls
             }
         }
 
+        /// <summary>
+        /// Refreshes the members list in the borrow control.
+        /// </summary>
+        public void RefreshMembers()
+        {
+            LoadMembers();
+        }
+
         private void LoadBooks()
         {
             try

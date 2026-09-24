@@ -15,6 +15,8 @@ namespace Library_Management_System.Controls
         private readonly LibraryManagementSystem.BLL.MemberBLL memberBLL = new LibraryManagementSystem.BLL.MemberBLL();
         private int selectedMemberId = 0;
 
+        public event EventHandler MemberChanged;
+
         public MemberControl()
         {
             InitializeComponent();
@@ -67,6 +69,7 @@ namespace Library_Management_System.Controls
                 MessageBox.Show("Member added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadMembers();
                 ClearForm();
+                MemberChanged?.Invoke(this, EventArgs.Empty);
             }
             catch (Exception ex)
             {
@@ -108,6 +111,7 @@ namespace Library_Management_System.Controls
                 MessageBox.Show("Member updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadMembers();
                 ClearForm();
+                MemberChanged?.Invoke(this, EventArgs.Empty);
             }
             catch (Exception ex)
             {
@@ -131,6 +135,7 @@ namespace Library_Management_System.Controls
                 MessageBox.Show("Member deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadMembers();
                 ClearForm();
+                MemberChanged?.Invoke(this, EventArgs.Empty);
             }
             catch (Exception ex)
             {

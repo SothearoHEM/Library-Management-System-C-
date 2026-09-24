@@ -15,6 +15,7 @@ namespace Library_Management_System.Forms
         public MainForm()
         {
             InitializeComponent();
+            memberControl1.MemberChanged += MemberControl1_MemberChanged;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -147,6 +148,11 @@ namespace Library_Management_System.Forms
             authorControl1.Visible = false;
             userMaControl11.Visible = true;
             reportControl1.Visible = false;
+        }
+
+        private void MemberControl1_MemberChanged(object sender, EventArgs e)
+        {
+            borrowControl1.RefreshMembers();
         }
     }
 }

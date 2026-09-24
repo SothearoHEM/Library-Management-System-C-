@@ -161,7 +161,7 @@ namespace Library_Management_System.Controls
                         col3.DefaultCellStyle.Format = "F2";
 
                     // Set width mode
-                    libraryStatisticData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    libraryStatisticData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
             }
             catch (Exception ex)
